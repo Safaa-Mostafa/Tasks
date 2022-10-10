@@ -1,0 +1,42 @@
+{{>header}}
+{{>navbar}}
+<section>
+  {{#if noTasks}}
+    <div>No users yet</div> 
+    {{else}}
+   <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>title</th>
+                <th>Content</th>
+                <th>status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+            {{#each allTasks}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.Content}}</td>
+                <td>{{this.status}}</td>
+                <td>
+                    <a href="/single/{{id}}" class="btn btn-primary">show</a>
+                    <a  href="/edit/{{id}}"  class="btn btn-success">edit</a>
+                    <a href="/delete/{{id}}" class="btn btn-danger">delete</a>
+                    <a href="/Change/{{id}}" class="btn btn-danger">Change</a>
+
+
+                </td>
+            </tr>
+                 {{/each}}
+        </tbody>
+    </table>
+  {{/if}}
+ 
+</section>
+{{>footer}}

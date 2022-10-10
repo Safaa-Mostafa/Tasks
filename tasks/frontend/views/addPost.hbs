@@ -1,0 +1,27 @@
+{{>header}}
+{{>navbar}}
+
+<section class="container my-5">
+    <form method="post" action="/addPostLogic">
+  <div class="mb-3">
+        <input type="text" class="form-control w-25" name="name" placeholder="Enter Your Name">
+        </div>
+        <div class="mb-3">
+        <input type="text" class="form-control w-25" name="title" placeholder="Title">
+       </div>
+       <div class="mb-3">
+        <input type="text" class="form-control w-25" name="Content" placeholder="Content">
+       </div>
+        <div class="mb-3">
+                <input type="radio" name="status" id="" value="true">
+                Active
+                <input type="radio" name="status" id="" value="false">
+                No Active
+        </div>
+      
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</section>
+{{>footer}}

@@ -1,0 +1,27 @@
+   {{>header}}
+   {{>navbar}}
+   {{#if Task}}
+<div class="card container mt-5 w-25 ">
+  <div class="card-header">
+{{Task.name}} </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{Task.title}}</p>
+      <footer class="blockquote-footer">content is {{Task.Content}} status is<cite title="status">
+        {{Task.status}}
+          {{#if Task.status }}
+     
+        <div class="alert alert-success">{{Task.status}}</div>
+        {{else}}
+  
+                <div class="alert alert-warning">{{Task.status}}</div>
+        {{/if}}
+        </blockquote>
+  </div>
+</div>
+       
+
+
+    {{/if}}
+
+    {{>footer}}

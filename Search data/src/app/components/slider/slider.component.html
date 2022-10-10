@@ -1,0 +1,13 @@
+<div class="container">
+  <input type="text" class="form-control w-25 h-25" name= "InputData" [(ngModel)]="InputData" placeholder = "search enter" (keyup.enter)="showData(InputData)" >
+  <div class="row">
+<div class="card col-md-4 mt-2 me-2" *ngFor="let item of show " style="width: 18rem;">
+  <img src="{{imageCard}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item.username}}</h5>
+    <p class="card-text">{{item.email}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+  </div>

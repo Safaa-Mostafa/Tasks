@@ -1,0 +1,28 @@
+{{>header}}
+{{>navbar}}
+{{#if Task}}
+
+<section class="container mt-4">
+    <form  method="post">
+  <div class="mb-3">
+        <input type="text" class="form-control w-25" name="name" placeholder="Enter Your Name" value="{{Task.name}}">
+        </div>
+        <div class="mb-3">
+        <input type="text" class="form-control w-25" name="title" placeholder="Title" value="{{Task.title}}">
+       </div>
+       <div class="mb-3">
+        <input type="text" class="form-control w-25" name="Content" placeholder="Content" value="{{Task.Content}}">
+       </div>
+        <div class="mb-3">
+                <input type="radio" name="status" id="" value="true">
+                Active
+                <input type="radio" name="status" id="" value="false">
+                No Active
+        </div>
+        <button type="submit" class="btn btn-warning">Submit</button>
+
+</form>
+</section>
+
+{{/if}}
+{{>footer}}
